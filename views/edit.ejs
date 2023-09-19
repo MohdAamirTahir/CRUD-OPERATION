@@ -1,0 +1,28 @@
+<%- include('./partials/header.ejs')%>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 mt-5">
+            <h2 class="alert alert-success text-cnter">Add New Student</h2>
+            <form method="post" action="/update/<%=data._id%>" method="post">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" class="form-control" name="name" id="name" aria-describedby="emailHelp" placeholder="Please Enter Your Name" value="<%=data.name%>">
+                </div>
+                <div class="mb-3">
+                  <label for="age" class="form-label">Age</label>
+                  <input type="text" class="form-control" name="age" id="age" placeholder="Please Enter Your Age" value="<%=data.age%>">
+                </div>
+                <div class="mb-3">
+                  <label for="fees" class="form-label">Fees</label>
+                  <input type="text" class="form-control" name="fees" id="fees" placeholder="Please Enter Your Fees" value="<%=data.fees%>">
+                </div>
+                <button type="submit" class="btn btn-warning">Submit</button>
+                <button type="submit" class="btn btn-secondary">Back To Home</button>
+              </form>
+              </div>
+       </div>
+</div>
+
+<%- include('./partials/footer.ejs')%>
+
+ 
