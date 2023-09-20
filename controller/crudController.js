@@ -52,7 +52,6 @@ const deleteDocs = async(req,res) =>{
       const result = await crudModel.findByIdAndDelete(req.params.id)
       if(result){
         res.redirect("/")
-        location.reload();
       }
     }catch(err){
         console.log(err)
