@@ -50,7 +50,7 @@ const updateDocs = async(req,res) =>{
 const deleteDocs = async(req,res) =>{
     try{
       const result = await crudModel.findByIdAndDelete(req.params.id)
-      if(!result){
+      if(result){
         res.redirect("/")
       }
     }catch(err){
