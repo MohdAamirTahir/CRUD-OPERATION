@@ -49,12 +49,12 @@ const updateDocs = async(req,res) =>{
 }
 const deleteDocs = async(req,res) =>{
     try{
-      const result = await crudModel.deleteByIdAndDelete(req.params.id)
-      if(result){
+      const result = await crudModel.findByIdAndDelete(req.params.id)
+      if(!result){
         res.redirect("/")
       }
     }catch(err){
-        console.log(console.error())
+        console.log(err)
     }
 }
 
